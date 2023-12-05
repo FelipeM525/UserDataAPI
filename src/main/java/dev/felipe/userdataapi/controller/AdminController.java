@@ -1,12 +1,13 @@
 package dev.felipe.userdataapi.controller;
 
+import dev.felipe.userdataapi.Request.UpdateUserRoleRequest;
 import dev.felipe.userdataapi.domain.User;
 import dev.felipe.userdataapi.service.AdministratorService;
+import jakarta.annotation.security.DenyAll;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -20,12 +21,16 @@ public class AdminController {
         this.adminService = adminService;
     }
 
-    @GetMapping(path = "users")
+    @GetMapping("/users")
     public ResponseEntity<List<User>> getAllRegisteredUserInfo(){
         return ResponseEntity.ok(adminService.getAllUsers());
     }
-    @DeleteMapping
-    public ResponseEntity<Map<String,String>> deleteUser(String email) {
+    @PutMapping("/update")
+    public ResponseEntity<Map<String,String>> updateUserRole(@RequestBody @Valid UpdateUserRoleRequest request) {
+        return ResponseEntity.ok(adminService.updateUserRole(request));
+    }
+    @DeleteMapping("/delete/{email}")
+    public ResponseEntity<Map<String,String>> deleteUser(@PathVariable String email) {
         return ResponseEntity.ok(adminService.deleteUser(email));
     }
 }

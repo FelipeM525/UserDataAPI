@@ -1,15 +1,19 @@
 package dev.felipe.userdataapi.Request;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class ChangePasswordRequest {
-    private String email;
+    @NotEmpty
+    private String username;
+    @NotEmpty
     private String newPassword;
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNewPassword() {
