@@ -1,4 +1,4 @@
-package dev.felipe.userdataapi.domain;
+package dev.felipe.userdataapi.Domain;
 
 public enum UserRole {
     ADMIN("admin"),

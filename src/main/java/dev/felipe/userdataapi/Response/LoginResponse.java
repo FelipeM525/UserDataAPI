@@ -1,4 +1,4 @@
-package dev.felipe.userdataapi.response;
+package dev.felipe.userdataapi.Response;
 
 public record LoginResponse(String token) {
 }

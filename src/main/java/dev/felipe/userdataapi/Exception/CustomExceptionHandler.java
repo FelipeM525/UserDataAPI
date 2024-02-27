@@ -1,10 +1,9 @@
 package dev.felipe.userdataapi.Exception;
 
-import dev.felipe.userdataapi.repository.UserRepository;
+import dev.felipe.userdataapi.Repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 

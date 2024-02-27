@@ -1,8 +1,8 @@
 package dev.felipe.userdataapi;
 
-import dev.felipe.userdataapi.domain.User;
-import dev.felipe.userdataapi.domain.UserRole;
-import dev.felipe.userdataapi.repository.UserRepository;
+import dev.felipe.userdataapi.Domain.User;
+import dev.felipe.userdataapi.Domain.UserRole;
+import dev.felipe.userdataapi.Repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

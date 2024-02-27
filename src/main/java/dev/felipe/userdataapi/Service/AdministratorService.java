@@ -1,9 +1,9 @@
-package dev.felipe.userdataapi.service;
+package dev.felipe.userdataapi.Service;
 
 import dev.felipe.userdataapi.Exception.CustomException;
 import dev.felipe.userdataapi.Request.UpdateUserRoleRequest;
-import dev.felipe.userdataapi.domain.User;
-import dev.felipe.userdataapi.repository.UserRepository;
+import dev.felipe.userdataapi.Domain.User;
+import dev.felipe.userdataapi.Repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

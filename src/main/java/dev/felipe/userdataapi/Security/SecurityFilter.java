@@ -1,9 +1,9 @@
-package dev.felipe.userdataapi.security;
+package dev.felipe.userdataapi.Security;
 
 import dev.felipe.userdataapi.Exception.CustomException;
-import dev.felipe.userdataapi.repository.UserRepository;
-import dev.felipe.userdataapi.service.JpaUserDetailsService;
-import dev.felipe.userdataapi.service.TokenService;
+import dev.felipe.userdataapi.Repository.UserRepository;
+import dev.felipe.userdataapi.Service.JpaUserDetailsService;
+import dev.felipe.userdataapi.Service.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

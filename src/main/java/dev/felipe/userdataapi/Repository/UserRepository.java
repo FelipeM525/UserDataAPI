@@ -1,6 +1,6 @@
-package dev.felipe.userdataapi.repository;
+package dev.felipe.userdataapi.Repository;
 
-import dev.felipe.userdataapi.domain.User;
+import dev.felipe.userdataapi.Domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

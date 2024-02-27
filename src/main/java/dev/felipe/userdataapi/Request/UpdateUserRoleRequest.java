@@ -1,6 +1,6 @@
 package dev.felipe.userdataapi.Request;
 
-import dev.felipe.userdataapi.domain.UserRole;
+import dev.felipe.userdataapi.Domain.UserRole;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 

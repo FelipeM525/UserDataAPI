@@ -1,11 +1,11 @@
-package dev.felipe.userdataapi.service;
+package dev.felipe.userdataapi.Service;
 
 import dev.felipe.userdataapi.Exception.CustomException;
 import dev.felipe.userdataapi.Request.ChangePasswordRequest;
 import dev.felipe.userdataapi.Request.SignUpRequest;
-import dev.felipe.userdataapi.domain.User;
-import dev.felipe.userdataapi.domain.UserRole;
-import dev.felipe.userdataapi.repository.UserRepository;
+import dev.felipe.userdataapi.Domain.User;
+import dev.felipe.userdataapi.Domain.UserRole;
+import dev.felipe.userdataapi.Repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

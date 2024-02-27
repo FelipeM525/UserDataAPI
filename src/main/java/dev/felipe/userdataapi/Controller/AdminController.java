@@ -1,12 +1,10 @@
-package dev.felipe.userdataapi.controller;
+package dev.felipe.userdataapi.Controller;
 
 import dev.felipe.userdataapi.Request.UpdateUserRoleRequest;
-import dev.felipe.userdataapi.domain.User;
-import dev.felipe.userdataapi.service.AdministratorService;
-import jakarta.annotation.security.DenyAll;
+import dev.felipe.userdataapi.Domain.User;
+import dev.felipe.userdataapi.Service.AdministratorService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

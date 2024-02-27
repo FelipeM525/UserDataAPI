@@ -1,15 +1,13 @@
-package dev.felipe.userdataapi.controller;
+package dev.felipe.userdataapi.Controller;
 
 import dev.felipe.userdataapi.Request.AuthenticationRequest;
 import dev.felipe.userdataapi.Request.ChangePasswordRequest;
 import dev.felipe.userdataapi.Request.SignUpRequest;
-import dev.felipe.userdataapi.domain.User;
-import dev.felipe.userdataapi.response.LoginResponse;
-import dev.felipe.userdataapi.service.AuthenticationService;
-import dev.felipe.userdataapi.service.TokenService;
-import jakarta.annotation.security.PermitAll;
+import dev.felipe.userdataapi.Domain.User;
+import dev.felipe.userdataapi.Response.LoginResponse;
+import dev.felipe.userdataapi.Service.AuthenticationService;
+import dev.felipe.userdataapi.Service.TokenService;
 import jakarta.validation.Valid;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

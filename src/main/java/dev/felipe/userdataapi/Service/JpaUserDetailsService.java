@@ -1,8 +1,6 @@
-package dev.felipe.userdataapi.service;
+package dev.felipe.userdataapi.Service;
 
-import dev.felipe.userdataapi.Exception.CustomException;
-import dev.felipe.userdataapi.repository.UserRepository;
-import org.springframework.http.HttpStatus;
+import dev.felipe.userdataapi.Repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
