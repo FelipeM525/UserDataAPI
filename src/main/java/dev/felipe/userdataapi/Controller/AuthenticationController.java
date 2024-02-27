@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -37,11 +38,11 @@ public class AuthenticationController {
 
     @PostMapping("/login")
     public ResponseEntity<Map<String,String>> login(@RequestBody @Valid AuthenticationRequest request) {
-        var usernamePassword = new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword());
-        var auth = authenticationManager.authenticate(usernamePassword);
+        UsernamePasswordAuthenticationToken usernamePassword = new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword());
+        Authentication auth = authenticationManager.authenticate(usernamePassword);
         System.out.println("Authentication details: " + auth);
         User authenticatedUser = (User) auth.getPrincipal();
-        var token = tokenService.generateToken(authenticatedUser);
+        String token = tokenService.generateToken(authenticatedUser);
         return ResponseEntity.ok(Map.of("status","Login Successfull token: " + new LoginResponse(token)));
 
     }

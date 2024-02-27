@@ -30,9 +30,9 @@ public class SecurityFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         var token = this.recoverToken(request);
         if(token != null) {
-            var username = tokenService.validateToken(token);
+            String username = tokenService.validateToken(token);
             UserDetails user = userRepository.findUserByUsername(username).orElseThrow(() -> new CustomException(HttpStatus.NOT_FOUND,"Not Found!",username));
-            var authentication = new UsernamePasswordAuthenticationToken(user,null,user.getAuthorities());
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         filterChain.doFilter(request, response);
