@@ -6,6 +6,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -21,6 +22,11 @@ public class User implements UserDetails {
     private String email;
     private String password;
     private UserRole role;
+
+    @OneToMany(mappedBy = "user")
+    private List<Parcel> parcels;
+    @OneToMany(mappedBy = "order")
+    private List<Order> orders;
 
     public User() {
     }
@@ -102,6 +108,16 @@ public class User implements UserDetails {
 
     public void setRole(UserRole role) {
         this.role = role;
+    }
+
+
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
